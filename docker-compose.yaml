@@ -1,0 +1,17 @@
+version: '2.2'
+
+services:
+
+  cpu_monitor:
+    image: gcavalcante8808/gunicorn_cpu_profiler
+    pid: "service:<GUNICORN_COMPOSE_SERVICE>"
+    command: ["/usr/local/bin/dumb-init","python","gunicorn_cpu_monitor.py"]
+    cap_add:
+      - SYS_PTRACE
+    environment:
+     FLAMECHARTS_FOLDER: /charts
+    volumes:
+     - /my-folder:/charts
+    depends_on:
+      - <GUNICORN_COMPOSE_SERVICE>
+
