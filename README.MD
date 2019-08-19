@@ -1,3 +1,6 @@
+[![](https://images.microbadger.com/badges/image/gcavalcante8808/gunicorn_cpu_profiler.svg)](https://microbadger.com/images/gcavalcante8808/krb5-server "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/gcavalcante8808/gunicorn_cpu_profiler.svg)](https://microbadger.com/images/gcavalcante8808/krb5-server "Get your own version badge on microbadger.com")
+
 # Gunicorn Cpu Monitor
 
 This is a simples project that aims to provide an ondemand cpu_profiler for gunicorn worker processes and its threads by using Uber [Pyflame](https://github.com/uber/pyflame) tools.
