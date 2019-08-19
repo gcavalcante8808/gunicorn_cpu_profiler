@@ -19,6 +19,9 @@ RUN curl -o /usr/local/bin/flame-chart-json https://raw.githubusercontent.com/ub
 
 FROM python:2.7.16-slim as final
 
+LABEL org.label-schema.vcs-ref=master \
+      org.label-schema.vcs-url="https://github.com/gcavalcante8808/gunicorn_cpu_profiler"
+
 COPY --from=builder /usr/local/bin/pyflame /usr/local/bin/pyflame
 COPY --from=builder /usr/local/bin/flame-chart-json /usr/local/bin/flame-chart-json
 COPY --from=builder /usr/local/bin/dumb-init /usr/local/bin/dumb-init
