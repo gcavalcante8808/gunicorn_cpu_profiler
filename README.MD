@@ -52,6 +52,7 @@ The following environment variables can be used to tune or change program`s beha
 
  * FLAMECHARTS_FOLDER: Folder where flamecharts json files will be created;
  * CPU_THRESHOLD: By Default, all processes that have more than 90 percent usage of a processor are profilled;
+ * CPU_READ_INTERVAL: By Default, pyflame will read sequentially 5 seconds of cpu use for each subprocess/worker for gunicorn. If you change this interval, be sure to check if the need time to do all reads (subprocess * CPU_READ_INTERVAL is lesser than `SCAN_INTERVAL`);
  * SCAN_INTERVAL: By Default, the scan for threads will occur every 60 seconds;
  * GUNICORN_PARENT_PID:  By Default, the cpu_monitor will try to use the first pid that is a child from pid `1`. This is a behaviour when you are using an supervisor or an minimal init system to initialize your gunicorn instance.
 
