@@ -14,7 +14,7 @@ flamechartjson = plumbum.local["flame-chart-json"]
 
 FLAMECHARTS_FOLDER = os.getenv('FLAMECHARTS_FOLDER')
 CPU_THRESHOLD = int(os.getenv('CPU_THRESHOLD', 90))
-CPU_READ_INTERVAL= int(os.getenv('CPU_READ_INTERVAL', 5)
+CPU_READ_INTERVAL= int(os.getenv('CPU_READ_INTERVAL', 5))
 SCAN_INTERVAL = int(os.getenv('SCAN_INTERVAL', 60))
 GUNICORN_PARENT_PID = int(os.getenv('GUNICORN_PARENT_PID', 1))
 
