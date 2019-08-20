@@ -13,9 +13,9 @@ pyflame = plumbum.local["pyflame"]
 flamechartjson = plumbum.local["flame-chart-json"]
 
 FLAMECHARTS_FOLDER = os.getenv('FLAMECHARTS_FOLDER')
-CPU_THRESHOLD = os.getenv('CPU_THRESHOLD', 90)
-SCAN_INTERVAL = os.getenv('SCAN_INTERVAL', 60)
-GUNICORN_PARENT_PID = os.getenv('GUNICORN_PARENT_PID', 1)
+CPU_THRESHOLD = int(os.getenv('CPU_THRESHOLD', 90))
+SCAN_INTERVAL = int(os.getenv('SCAN_INTERVAL', 60))
+GUNICORN_PARENT_PID = int(os.getenv('GUNICORN_PARENT_PID', 1))
 
 
 def setup_logging():
